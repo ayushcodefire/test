@@ -32,10 +32,10 @@ if(empty(array_filter($final))){
     
 /**
  * Function to get the subset 
- * @param type $arr
- * @param type $n
- * @param type $r
- * @param type $sum
+ * @param type $arr Defined Array
+ * @param type $n Size of the array
+ * @param type $length length of the Combination
+ * @param type $sum Defined Sum
  * @return type array
  */
 function get_subset($arr, $n, $length, $sum) {
@@ -52,8 +52,8 @@ function get_subset($arr, $n, $length, $sum) {
 
 /**
  * Check for sum
- * @param type $val
- * @param type $sum
+ * @param type $val Combination values
+ * @param type $sum Defined Value
  * @return boolean True if equal to sum else False
  */
 function check_for_sum($val, $sum){
@@ -68,13 +68,13 @@ function check_for_sum($val, $sum){
 
 /**
  * All the Possible combination of length $length
- * @param type $arr
- * @param type $data
- * @param type $start
- * @param type $end
- * @param type $index
- * @param type $length
- * @param type $result
+ * @param type $arr Defined array
+ * @param type $data Enpty array to get the peocess values
+ * @param type $start Starting index
+ * @param type $end End Index
+ * @param type $index Index to start
+ * @param type $length length of the Combination
+ * @param type $result Result array to return
  * @return type Array
  */
 function find_all_combination($arr, $data, $start, $end, $index, $length, $result = array()) {
