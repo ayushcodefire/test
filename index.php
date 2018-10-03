@@ -11,6 +11,10 @@ $sum = 30;
 $arr = array(2,4,6,8,10,12,14,16,18); 
 $size = sizeof($arr); 
 
+echo '<h3>Current PHP version: ' . phpversion().'</h3>';
+
+//Execution Time Start
+$time_start = microtime(true); 
 // Check for required values
 if($size == 0 || $sum == ""){
     echo '<h2>Please define the required values.</h2>';
@@ -28,8 +32,15 @@ if(empty(array_filter($final))){
     echo '<h2>Possible Combination of Array</h2>';
     echo '<pre>';
     print_r(array_values(array_filter($final)));
+    echo '</pre>';
 }
-    
+
+// Execution Stop time
+$time_end = microtime(true);
+$execution_time = ($time_end - $time_start);
+
+//Total execution time of the script
+echo '<h2>Total Execution Time: '.$execution_time.' Seconds</h2> ';
 /**
  * Function to get the subset 
  * @param type $arr Defined Array
